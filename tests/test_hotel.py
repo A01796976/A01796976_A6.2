@@ -1,9 +1,16 @@
+"""
+Módulo de pruebas para el sistema de reservaciones.
+"""
 import unittest
 import os
 from hotel import Hotel
 
 
 class TestHotel(unittest.TestCase):
+    """
+    Suite de pruebas para validar la lógica de creación y
+    edición de hoteles.
+    """
     def setUp(self):
         """Configuración previa a cada test."""
         self.hotel = Hotel()
@@ -54,7 +61,7 @@ class TestHotel(unittest.TestCase):
     def test_corrupt_file(self):
         """Cubre el error de lectura (JSONDecodeError)."""
         # Creamos un archivo corrupto a propósito
-        with open("test_hotels.json", "w") as f:
+        with open("test_hotels.json", "w", encoding='utf-8') as f:
             f.write("{ esto no es un json valido }")
 
         # Al intentar leerlo, no debe fallar

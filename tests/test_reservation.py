@@ -1,9 +1,16 @@
+"""
+Módulo de pruebas para el sistema de reservaciones.
+"""
 import unittest
 import os
 from reservation import Reservation
 
 
 class TestReservation(unittest.TestCase):
+    """
+    Suite de pruebas para validar la lógica de creación y
+    cancelación de reservaciones.
+    """
     def setUp(self):
         """Configuración previa a cada test."""
         self.reservation = Reservation()
