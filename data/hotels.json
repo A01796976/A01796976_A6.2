@@ -1,0 +1,4 @@
+[
+  {"id": 1, "name": "Hotel Tec", "location": "Monterrey", "rooms": 20},
+  {"id": 2, "name": "Hotel Central", "location": "Guanajuato", "rooms": 15}
+]
