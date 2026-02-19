@@ -92,6 +92,7 @@ class TestAllSystem(unittest.TestCase):
         # 3. Modificar
         result = self.customer.modify_customer_info(10, email="b@b.com")
         self.assertTrue(result)
+        customer_info = self.customer.display_customer_info(10)
         self.assertEqual(customer_info["email"], "b@b.com")
         result = self.customer.modify_customer_info(999, name="Nadie")
         self.assertFalse(result)
