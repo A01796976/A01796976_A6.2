@@ -69,7 +69,7 @@ class TestCustomer(unittest.TestCase):
     def test_invalid_json_file(self):
         """Cubre líneas 21-22: Archivo corrupto."""
         # Creamos un archivo basura
-        with open("test_customers.json", "w",encoding='utf-8') as f:
+        with open("test_customers.json", "w", encoding='utf-8') as f:
             f.write("Esto no es un JSON")
 
         # Debe manejar el error y retornar None o lista vacía sin tronar
